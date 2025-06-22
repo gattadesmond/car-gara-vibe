@@ -1,6 +1,13 @@
-Tôi muốn bạn tạo một giao diện web "Tạo phiếu tiếp nhận xe" cho một gara ô tô. Đây là giao diện mobile-first, tối ưu cho máy tính bảng (iPad mini). Toàn bộ giao diện có các phần như sau:
+# 📦 Component: OrderCreate
+Tạo phiếu sữa chữa là biểu mẫu dùng để ghi nhận thông tin khách hàng, xe và yêu cầu sửa chữa trước khi phân công kỹ thuật viên thực hiện.
 
----
+## 🎯 Mục tiêu
+Tạo phiếu sữa chữa, là tạo ra một `OrderItem` (xem file `components/order-item.md`)
+Phiếu sửa chữa `OrderItem` có thể được tạo ra bởi `CV` hoặc `ADMIN`.
+
+## 🖼️ Giao diện
+- Khung bo góc nhẹ, có bóng đổ nhẹ.
+- Dưới: nút “Tạo phiếu tiếp nhận” và "Hủy"
 
 ## 📋 1. Thông tin khách hàng
 Nếu là khách hàng cũ, thì có thể chọn ở trang `Customer` (xem file `pages/customer.md`).
@@ -68,7 +75,7 @@ Nếu là khách hàng cũ, thì có thể chọn các xe đã đăng ký ở `C
   - Ảnh tổng thể 4 góc
   - JPG, PNG, ≤5MB, tối đa 10 ảnh
 
-## 7. 🔘 Button thao tác
+## 8. 🔘 Button thao tác
 
 - `Tạo phiếu tiếp nhận`: Gửi form
 - `Huỷ`: Thoát khỏi form

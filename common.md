@@ -13,8 +13,18 @@ Phát triển **Mobile Web App** hỗ trợ cố vấn dịch vụ và kỹ th
 ### 👤 Đối tượng sử dụng(User Persona)
 
 - **Cố vấn dịch vụ (CV)**: Chọn khách hàng cũ hoặc tạo khách hàng mới, Tạo phiếu tiếp nhận, kiểm tra triệu chứng xe và lập phiếu sửa chữa.
-- **Kỹ thuật viên (KTV)**: Nhận chọn task từ phiếu sửa chữa, kiểm tra xe và ghi note thông tin sửa chữa, tạo “lệnh sửa chữa”.
-- **Quản lý gara**: Giám sát quy trình, kiểm tra báo giá, xuất báo cáo tổng hợp.
+- **Quản lý gara (ADMIN)**: Tiếp nhận phiếu sửa chữa, phần công KTV nhận task. Giám sát quy trình, kiểm tra báo giá, xuất báo cáo tổng hợp.
+- **Kỹ thuật viên (KTV)**: Nhận task từ phiếu sửa chữa, kiểm tra xe và ghi note thông tin sửa chữa, tạo “lệnh sửa chữa”.
+
+
+### Luổng sử dụng
+
+- **CV** đăng nhập -> Tạo phiếu tiếp nhận --> Chọn hoặc tạo mới khách hàng --> Chọn thông tin xe hoặc tạo mới -> Tạo Phiếu sửa chữa -> Hoàn thành
+- **ADMIN** đăng nhập -> Tiếp nhận phiếu sửa chữa -> Phân công KTV -> Kiểm tra báo giá -> Xuất báo cáo
+- **KTV** đăng nhập -> Nhận task -> Kiểm tra xe -> Ghi note thông tin sửa chữa -> Tạo lệnh sửa chữa
+
+
+
 
 ### ⚙️ Tính năng MVP (Giai đoạn 1) (Key Features)
 
@@ -39,6 +49,20 @@ Phát triển **Mobile Web App** hỗ trợ cố vấn dịch vụ và kỹ th
 7. Kỹ thuật viên tạo lệnh sửa chữa
 8. Cố vấn xem báo giá và tiến hành thanh toán
 9. Cố vấn xuất báo cáo
+
+Đăng nhập hệ thống (All User)
+Nhập/chọn thông tin khách hàng (CVDV)
+Nhập/chọn thông tin xe (CVDV)
+Thu thập tình trạng xe (CVDV)
+Chẩn đoán sơ bộ  (CVDV, có thể không thực hiện bước này)
+Lập lệnh kiểm tra xe: Dọn Dẹp, Đồng Sơn, Cơ, Điện, Lạnh (CVDV)
+Phân công kỹ thuật viên (Manager)
+Kiểm tra và đánh giá (KTV)
+Duyệt báo cáo toàn diện (Manager/ CVDV)
+Xem báo cáo toàn diện (CVDV)
+Quản lý dữ liệu triệu chứng (Manager)
+Quản lý người dùng và phân quyền (Manager)
+
 
 ### Mô tả giao diện (UI)
 
@@ -95,3 +119,11 @@ Bản MVP sẽ chưa kết nối với hệ thống quản trị gara, sau khi h
 | Export PDF | react-pdf hoặc pdfmake |
 | Deploy | Vercel |
 | Mobile App | Có thể đóng gói qua Capacitor / Expo (sau MVP) |
+
+│   ├── 📁 cv/                        # Cố vấn dịch vụ
+│   │   ├── dashboard/               # Tổng quan
+│   │   ├── customers/               # Tạo + quản lý khách hàng (tạo/edit trong modal)
+│
+│   ├── 📁 manager/                  # Manager
+│   │   ├── dashboard/               # Tổng quan
+│   │   ├── customers/               # Tạo + quản lý khách hàng (tạo/edit trong modal)
