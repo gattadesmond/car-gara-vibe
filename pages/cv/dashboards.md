@@ -14,9 +14,8 @@ Tạo giao diện dashboard tổng quan dành cho vai trò **Cố vấn dịch v
 - Logo app: "Gara Manager", dòng phụ: "Cố Vấn Dịch Vụ"
 - Menu:
   - Dashboard (🏠 icon)
-  - Khách hàng (👤 icon)
-  - Phiếu tiếp nhận (📄 icon)
-  - Báo giá (💵 hoặc 📑 icon)
+  - Khách hàng (👤 icon) (xem file `pages/customers/customers.md`)
+  - Tạo phiếu tiếp nhận (📄 icon) (xem file `pages/order/order-create.md`)
 - Dưới cùng:
   - Email người dùng: `cv@gara.com`
   - Nút Đăng xuất (🔓 icon + label)
@@ -30,9 +29,8 @@ Tạo giao diện dashboard tổng quan dành cho vai trò **Cố vấn dịch v
 
 ### B. Tổng quan số lượng
 - 4 ô thống kê:
-  - **Tổng phiếu** (📄 icon)
   - **Chờ xử lý** (🕒 icon)
-  - **Đang sửa** (🚗 icon)
+  - **Đang chuẩn đoán** (🚗 icon)
   - **Hoàn thành** (✅ icon)
 - Mỗi ô:
   - Bo góc, có border, padding lớn
@@ -46,33 +44,9 @@ Tạo giao diện dashboard tổng quan dành cho vai trò **Cố vấn dịch v
     - Label phụ: “Xem danh sách và thông tin khách hàng”
   - **Tạo phiếu tiếp nhận** (➕)
     - Label phụ: “Tạo phiếu mới cho khách hàng”
-  - **Lập báo giá** (📑)
-    - Label phụ: “Tạo và quản lý báo giá sửa chữa”
 - Màu sắc: mỗi block có màu nền riêng (xanh nhạt, xanh lá nhạt, tím nhạt)
 
 ---
 
 ### D. Phiếu tiếp nhận gần đây
-- Tiêu đề: "10 phiếu mới nhất"
-- Hiển thị danh sách 2–3 phiếu tiếp nhận gần đây:
-  - Họ tên khách hàng
-  - Biển số – Dòng xe (năm)
-  - Ngày tiếp nhận
-  - Trạng thái (VD: “Chẩn đoán”, “Báo giá”)
-  - Nút hành động (VD: “Tiếp tục chẩn đoán”, “Lập báo giá”)
-
----
-
-## 🧩 Yêu cầu kỹ thuật
-- Sử dụng React + Tailwind CSS
-- Component hóa từng phần: Card, QuickActions, Stats, Sidebar, IntakeItem
-- Có thể sử dụng ShadCN UI
-- Font dễ đọc, spacing thoáng
-- Tối ưu hiển thị cho tablet (768px+)
-
----
-
-## 🧠 Ghi chú thêm
-- Số lượng thống kê lấy từ props (VD: `totalOrders`, `pending`, ...)
-- Các “phiếu tiếp nhận gần đây” nên cho dưới dạng danh sách có thể map từ mảng
-- Sidebar có thể cố định hoặc collapsible nếu trên mobile
+- Danh sách các `OrderItem` (xem file `components/order-item.md`)
